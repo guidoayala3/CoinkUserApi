@@ -39,14 +39,13 @@ namespace UserRegistrationApi.Middleware
             response.StatusCode = exception switch
             {
                 InvalidOperationException => (int)HttpStatusCode.BadRequest,
-                Npgsql.PostgresException => (int)HttpStatusCode.Conflict, // Para error de clave duplicada
+                Npgsql.PostgresException => (int)HttpStatusCode.Conflict, 
                 _ => (int)HttpStatusCode.InternalServerError,
             };
 
             var errorResponse = new
             {
                 error = exception.Message,
-                // Si es un NpgsqlException, extraemos el código SQL y el mensaje detallado
                 details = exception is Npgsql.PostgresException npgsqlEx
                     ? new
                     {

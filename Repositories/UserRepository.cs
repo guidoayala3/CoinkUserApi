@@ -50,12 +50,10 @@ namespace UserRegistrationApi.Repositories
                 }
                 catch (NpgsqlException ex) when (ex.SqlState == "23505")
                 {
-                    // Rethrow the exception with a custom message to be caught by the middleware
                     throw new InvalidOperationException("Ya existe un usuario con los mismos datos (nombre, teléfono y dirección).", ex);
                 }
                 catch (Exception ex)
                 {
-                    // Rethrow any other unexpected exceptions
                     throw new InvalidOperationException("Ocurrió un error al insertar el usuario.", ex);
                 }
             }
@@ -65,7 +63,6 @@ namespace UserRegistrationApi.Repositories
         // Método para obtener todos los usuarios
         public async Task<IEnumerable<UserView>> GetAllUsersAsync()
         {
-            // Asegúrate de que la consulta coincida con la estructura de la vista en la base de datos
             return await _context.UserViews.FromSqlRaw("SELECT * FROM user_view").ToListAsync();
         }
     }
