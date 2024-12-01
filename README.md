@@ -70,12 +70,7 @@ La API estará disponible en `http://localhost:5227` (por defecto).
 ## **Acceder a la documentación de Swagger**
 Si estás ejecutando la aplicación en un entorno de desarrollo, puedes acceder a la documentación de Swagger en:
 `http://localhost:5227/swagger`
-# **Despliegue**
-\### Desplegar en un servidor
-Para desplegar la API en un servidor de producción o en un entorno en la nube (por ejemplo, AWS, Azure, Heroku), sigue estos pasos generales:
-1\. Configura las variables de entorno en el servidor (para la base de datos y otros servicios).
-2\. Realiza un despliegue continuo desde GitHub utilizando un pipeline de CI/CD (por ejemplo, GitHub Actions, Azure DevOps, Jenkins).
-3\. Asegúrate de que el servidor esté configurado para ejecutar aplicaciones ASP.NET Core.
+
 # **Tecnologías utilizadas**
 \- \*\*.NET 8.0\*\*: Framework para el desarrollo de la API.
 \- \*\*PostgreSQL\*\*: Base de datos relacional utilizada para almacenar la información de los usuarios.
