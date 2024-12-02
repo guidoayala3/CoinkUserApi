@@ -47,7 +47,7 @@ Body (JSON):
 # **Instalación y ejecución local**
 ## **Clonar el repositorio**
 1\. Clona el repositorio desde GitHub:
-`git clone https://github.com/tu-usuario/tu-repositorio.git`
+`git clone https://github.com/guidoayala3/CoinkUserApi`
 2\. Cambia al branch `develop`:
 `git checkout develop`
 ## **Configuración del entorno**
